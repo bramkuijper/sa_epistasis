@@ -67,7 +67,7 @@ int main(int argc, char **argv)
     {
         for (sAf = 0; sAf <= 0.5 + step_s; sAf += step_s)
         {
-            cout << sAm << " " << sAf << endl;
+//            cout << sAm << " " << sAf << endl;
                             x1 = 0.25;
                             x2 = 0.25; 
                             x3 = 0.25;
@@ -403,6 +403,7 @@ y4tplus1 = (((em + (-1 + hAm*sAm)*(-1 + hBm*sBm))*x1 + x2 - hAm*sAm*x2 + x3 - hB
     } // sAm
 
     DataFile << endl << endl 
+                    << "type;" << "autosomal" << endl
                    << "r;" <<  r << endl
                    << "hAm;" <<  hAm  << endl
                    << "sAm;" << sAm << endl
