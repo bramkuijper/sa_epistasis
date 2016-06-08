@@ -65,7 +65,7 @@ int main(int argc, char **argv)
 
     for (sAm = 0; sAm < 0.5 + step_s; sAm += step_s)
     {
-        for (sAf = 0; sAf <= 0.5 + step_s; sAf += step_s)
+        for (sAf = 0; sAf < 0.5 + step_s; sAf += step_s)
         {
 //            cout << sAm << " " << sAf << endl;
                             x1 = 0.25;
