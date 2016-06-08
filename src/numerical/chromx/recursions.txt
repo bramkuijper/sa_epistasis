@@ -1,0 +1,22 @@
+wF = x(3)*y(1) - hAf*sAf*x(3)*y(1) + x(4)*y(1) + ef*x(4)*y(1) - hAf*sAf*x(4)*y(1) - hBf*sBf*x(4)*y(1) + hAf*hBf*sAf*sBf*x(4)*y(1) + x(3)*y(2) + ef*x(3)*y(2) - hAf*sAf*x(3)*y(2) - hBf*sBf*x(3)*y(2) + hAf*hBf*sAf*sBf*x(3)*y(2) + x(4)*y(2) + 2*ef*x(4)*y(2) - hAf*sAf*x(4)*y(2) - sBf*x(4)*y(2) + hAf*sAf*sBf*x(4)*y(2) + x(3)*y(3) - sAf*x(3)*y(3) + x(4)*y(3) + 2*ef*x(4)*y(3) - sAf*x(4)*y(3) - hBf*sBf*x(4)*y(3) + hBf*sAf*sBf*x(4)*y(3) + x(3)*y(4) + 2*ef*x(3)*y(4) - sAf*x(3)*y(4) - hBf*sBf*x(3)*y(4) + hBf*sAf*sBf*x(3)*y(4) + x(4)*y(4) + 4*ef*x(4)*y(4) - sAf*x(4)*y(4) - sBf*x(4)*y(4) + sAf*sBf*x(4)*y(4) + x(2)*(y(1) - hBf*sBf*y(1) + y(2) - sBf*y(2) + y(3) + ef*y(3) - hAf*sAf*y(3) - hBf*sBf*y(3) + hAf*hBf*sAf*sBf*y(3) + y(4) + 2*ef*y(4) - hAf*sAf*y(4) - sBf*y(4) + hAf*sAf*sBf*y(4)) + x(1)*(y(1) + y(2) - hBf*sBf*y(2) + y(3) - hAf*sAf*y(3) + y(4) + ef*y(4) - hAf*sAf*y(4) - hBf*sBf*y(4) + hAf*hBf*sAf*sBf*y(4));
+
+wM = ((4*em + (-1 + sAm)*(-1 + sBf))*x(1) + x(2) - sAm*x(2) + x(3) - sBf*x(3) + x(4))*y(5);
+
+x1tplus1 = (2*x(1)*y(1) + (1 - hBf*sBf)*x(2)*y(1) + (1 - hAf*sAf)*x(3)*y(1) + (1 - r)*(ef + (-1 + hAf*sAf)*(-1 + hBf*sBf))*x(4)*y(1) + (1 - hBf*sBf)*x(1)*y(2) + r*(ef + (-1 + hAf*sAf)*(-1 + hBf*sBf))*x(3)*y(2) + (1 - hAf*sAf)*x(1)*y(3) + r*(ef + (-1 + hAf*sAf)*(-1 + hBf*sBf))*x(2)*y(3) + (1 - r)*(ef + (-1 + hAf*sAf)*(-1 + hBf*sBf))*x(1)*y(4))/(2.*wF);
+
+x2tplus1 = ((1 - hBf*sBf)*x(2)*y(1) + r*(ef + (-1 + hAf*sAf)*(-1 + hBf*sBf))*x(4)*y(1) + (1 - hBf*sBf)*x(1)*y(2) - 2*(-1 + sBf)*x(2)*y(2) + (1 - r)*(ef + (-1 + hAf*sAf)*(-1 + hBf*sBf))*x(3)*y(2) + (2*ef + (-1 + hAf*sAf)*(-1 + sBf))*x(4)*y(2) + (1 - r)*(ef + (-1 + hAf*sAf)*(-1 + hBf*sBf))*x(2)*y(3) + r*(ef + (-1 + hAf*sAf)*(-1 + hBf*sBf))*x(1)*y(4) + (2*ef + (-1 + hAf*sAf)*(-1 + sBf))*x(2)*y(4))/(2.*wF);
+
+x3tplus1 = (((1 - hAf*sAf)*x(1) + (ef + (-1 + hAf*sAf)*(-1 + hBf*sBf))*x(2) + (2*ef + (-1 + sAf)*(-1 + hBf*sBf))*x(4))*y(3) + x(3)*((1 - hAf*sAf)*y(1) - (-1 + r)*(ef + (-1 + hAf*sAf)*(-1 + hBf*sBf))*y(2) + 2*y(3) - 2*sAf*y(3) + y(4) + 2*ef*y(4) - sAf*y(4) - hBf*sBf*y(4) + hBf*sAf*sBf*y(4)) + r*(ef + (-1 + hAf*sAf)*(-1 + hBf*sBf))*(x(4)*y(1) - x(2)*y(3) + x(1)*y(4)))/(2.*wF);
+
+x4tplus1 = (((ef + (-1 + hAf*sAf)*(-1 + hBf*sBf))*x(1) + (2*ef + (-1 + hAf*sAf)*(-1 + sBf))*x(2) + (2*ef + (-1 + sAf)*(-1 + hBf*sBf))*x(3))*y(4) + x(4)*(-((-1 + r)*(ef + (-1 + hAf*sAf)*(-1 + hBf*sBf))*y(1)) + (2*ef + (-1 + hAf*sAf)*(-1 + sBf))*y(2) + y(3) + 2*ef*y(3) - sAf*y(3) - hBf*sBf*y(3) + hBf*sAf*sBf*y(3) + 2*y(4) + 8*ef*y(4) - 2*sAf*y(4) - 2*sBf*y(4) + 2*sAf*sBf*y(4)) + r*(ef + (-1 + hAf*sAf)*(-1 + hBf*sBf))*(x(3)*y(2) + x(2)*y(3) - x(1)*y(4)))/(2.*wF);
+
+y1tplus1 = ((4*em + (-1 + sAm)*(-1 + sBf))*x(1)*y(5))/(2.*wM);
+
+y2tplus1 = -((-1 + sAm)*x(2)*y(5))/(2.*wM);
+
+y3tplus1 = -((-1 + sBf)*x(3)*y(5))/(2.*wM);
+
+y4tplus1 = (x(4)*y(5))/(2.*wM);
+
+y5tplus1 = (((4*em + (-1 + sAm)*(-1 + sBf))*x(1) + x(2) - sAm*x(2) + x(3) - sBf*x(3) + x(4))*y(5))/(2.*wM);
+

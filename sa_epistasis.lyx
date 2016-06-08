@@ -1,0 +1,316 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\definecolor{darkblue}{RGB}{0,4,106}
+\usepackage{doi}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{width=7cm}
+\allowdisplaybreaks
+\tikzset{test/.style={font=\sffamily\huge}}
+\DeclareMathVersion{sfnums}
+\usepackage{apjfonts}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "times" "default"
+\font_sans "helvet" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\paperfontsize 12
+\spacing other 1.05
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 2
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "citecolor=darkblue,urlcolor=darkblue,linkcolor=darkblue"
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Sex-Differences in Epistasis and Sexually Antagonistic Variation
+\end_layout
+
+\begin_layout Author
+Bram Kuijper
+\end_layout
+
+\begin_layout Abstract
+Genetic traits are inherently complex.
+ The same follows for sexually antagonistic traits.
+ Previous we have seen dominance, yet the role of epistasis is largely unexplore
+d.
+ Here we assess more complicated scenarios
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+Read 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Phillips2008,Mackay2014"
+
+\end_inset
+
+ on epistasis in general.
+ 
+\end_layout
+
+\begin_layout Standard
+SA as a driver of polymorphism.
+ While conventional studies have largely concentrated on how sexual antagonism
+ affects polymorphism in single loci 
+\begin_inset CommandInset citation
+LatexCommand citep
+before "e.g.,"
+key "Kidwell1977,Rice1984,Fry2010,Connallon2012"
+
+\end_inset
+
+, more recent models have started to assess how SA affects multilocus evolution
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Patten2010,Ubeda2011,Connallon2011,Arnqvist2014,Rydzewski2016"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Previously epistasis only studied by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Arnqvist2014"
+
+\end_inset
+
+.
+ They showed that blalbla
+\end_layout
+
+\begin_layout Standard
+Traits underlying SA are expected to be polygenic 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Cox2009,Connallon2010b"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Concave due to sex-specific stabilizing selection 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Fry2010"
+
+\end_inset
+
+ may hold, but also may not always hold (think arms races).
+\end_layout
+
+\begin_layout Standard
+Positive epistasis has been assessed by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Reed2007,Connallon2010a,Connallon2010c"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Negative epistasis has been assessed by Arnqvist.
+ Also important in freq.
+ dep selection apparently, 
+\end_layout
+
+\begin_layout Section
+The model
+\end_layout
+
+\begin_layout Standard
+We assess the role of different types of epistasis on sexually antagonistic
+ traits.
+ Explain different ypes 
+\end_layout
+
+\begin_layout Section
+Results
+\end_layout
+
+\begin_layout Standard
+1.
+ Sex-differences in additive x additive epistasis: alleles favored in the
+ sex having negative epistasis wins.
+\end_layout
+
+\begin_layout Standard
+1a: linkage disequilibria sensu 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Ubeda2011"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+2.
+ Sex-linkage?
+\end_layout
+
+\begin_layout Standard
+3.
+ Dominance by dominance epistasis 
+\end_layout
+
+\begin_layout Section
+Discussion
+\end_layout
+
+\begin_layout Standard
+Although genetic interactions lead to a sheer unlimited complexity, the
+ current study shows that there are nonetheless some striking generalities
+ to be made.
+ 
+\end_layout
+
+\begin_layout Standard
+Discuss empirical evidence of sex differences in epistasis (mouse data).
+ Great search term is sex-differences in genetic architecture (e.g., 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Vink2012"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Think a bit about evolution of epistasis and sex differences.
+ When does negative and positive epistasis evolve?
+\end_layout
+
+\begin_layout Paragraph
+Acknowledgements
+\end_layout
+
+\begin_layout Standard
+I am grateful for feedback provided by Ana Duarte.
+ BK is supported by an early career fellowship from the Leverhulme Trust
+ (grant number 2015-273).
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "/home/bram/Projects/databases/references"
+options "bram"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Supplementary Information
+\end_layout
+
+\begin_layout Section
+Modeling approach
+\end_layout
+
+\begin_layout Standard
+We have the following recursions
+\begin_inset Formula 
+\begin{align*}
+x_{ij,t+1} & =
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
