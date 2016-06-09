@@ -6,8 +6,8 @@
 *.png
 *.tar.gz
 *.tar.bz2
-iter_*
-sim_*
+iter*
+sim*
 graph_sim_*
 graph_iter_*
 *.csv

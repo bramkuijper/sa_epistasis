@@ -53,7 +53,8 @@ int main(int argc, char **argv)
     double pe, qe, ps, qs;
 
     double bound = 1e-12;
-    double pol_bound = 1e-05;
+    double pol_bound_f = 1e-05;
+    double pol_bound_m = 5e-06;
     int state;
     int maxt = 10000000;
 
@@ -65,7 +66,7 @@ int main(int argc, char **argv)
 
     for (sAm = 0; sAm < 0.5 + step_s; sAm += step_s)
     {
-        for (sAf = 0; sAf <= 0.5 + step_s; sAf += step_s)
+        for (sAf = 0; sAf < 0.5 + step_s; sAf += step_s)
         {
 //            cout << sAm << " " << sAf << endl;
                             x1 = 0.25;
@@ -88,7 +89,7 @@ int main(int argc, char **argv)
                             {
                                 wF = x3*y1 - hAf*sAf*x3*y1 + x4*y1 + ef*x4*y1 - hAf*sAf*x4*y1 - hBf*sBf*x4*y1 + hAf*hBf*sAf*sBf*x4*y1 + x3*y2 + ef*x3*y2 - hAf*sAf*x3*y2 - hBf*sBf*x3*y2 + hAf*hBf*sAf*sBf*x3*y2 + x4*y2 + 2*ef*x4*y2 - hAf*sAf*x4*y2 - sBf*x4*y2 + hAf*sAf*sBf*x4*y2 + x3*y3 - sAf*x3*y3 + x4*y3 + 2*ef*x4*y3 - sAf*x4*y3 - hBf*sBf*x4*y3 + hBf*sAf*sBf*x4*y3 + x3*y4 + 2*ef*x3*y4 - sAf*x3*y4 - hBf*sBf*x3*y4 + hBf*sAf*sBf*x3*y4 + x4*y4 + 4*ef*x4*y4 - sAf*x4*y4 - sBf*x4*y4 + sAf*sBf*x4*y4 + x2*(y1 - hBf*sBf*y1 + y2 - sBf*y2 + y3 + ef*y3 - hAf*sAf*y3 - hBf*sBf*y3 + hAf*hBf*sAf*sBf*y3 + y4 + 2*ef*y4 - hAf*sAf*y4 - sBf*y4 + hAf*sAf*sBf*y4) + x1*(y1 + y2 - hBf*sBf*y2 + y3 - hAf*sAf*y3 + y4 + ef*y4 - hAf*sAf*y4 - hBf*sBf*y4 + hAf*hBf*sAf*sBf*y4);
 
-wM = ((4*em + (-1 + sAm)*(-1 + sBf))*x1 + x2 - sAm*x2 + x3 - sBf*x3 + x4)*y5;
+wM = ((4*em + (-1 + sAm)*(-1 + sBm))*x1 + x2 - sAm*x2 + x3 - sBm*x3 + x4)*y5;
 
 x1tplus1 = (2*x1*y1 + (1 - hBf*sBf)*x2*y1 + (1 - hAf*sAf)*x3*y1 + (1 - r)*(ef + (-1 + hAf*sAf)*(-1 + hBf*sBf))*x4*y1 + (1 - hBf*sBf)*x1*y2 + r*(ef + (-1 + hAf*sAf)*(-1 + hBf*sBf))*x3*y2 + (1 - hAf*sAf)*x1*y3 + r*(ef + (-1 + hAf*sAf)*(-1 + hBf*sBf))*x2*y3 + (1 - r)*(ef + (-1 + hAf*sAf)*(-1 + hBf*sBf))*x1*y4)/(2.*wF);
 
@@ -98,15 +99,15 @@ x3tplus1 = (((1 - hAf*sAf)*x1 + (ef + (-1 + hAf*sAf)*(-1 + hBf*sBf))*x2 + (2*ef 
 
 x4tplus1 = (((ef + (-1 + hAf*sAf)*(-1 + hBf*sBf))*x1 + (2*ef + (-1 + hAf*sAf)*(-1 + sBf))*x2 + (2*ef + (-1 + sAf)*(-1 + hBf*sBf))*x3)*y4 + x4*(-((-1 + r)*(ef + (-1 + hAf*sAf)*(-1 + hBf*sBf))*y1) + (2*ef + (-1 + hAf*sAf)*(-1 + sBf))*y2 + y3 + 2*ef*y3 - sAf*y3 - hBf*sBf*y3 + hBf*sAf*sBf*y3 + 2*y4 + 8*ef*y4 - 2*sAf*y4 - 2*sBf*y4 + 2*sAf*sBf*y4) + r*(ef + (-1 + hAf*sAf)*(-1 + hBf*sBf))*(x3*y2 + x2*y3 - x1*y4))/(2.*wF);
 
-y1tplus1 = ((4*em + (-1 + sAm)*(-1 + sBf))*x1*y5)/(2.*wM);
+y1tplus1 = ((4*em + (-1 + sAm)*(-1 + sBm))*x1*y5)/(2.*wM);
 
 y2tplus1 = -((-1 + sAm)*x2*y5)/(2.*wM);
 
-y3tplus1 = -((-1 + sBf)*x3*y5)/(2.*wM);
+y3tplus1 = -((-1 + sBm)*x3*y5)/(2.*wM);
 
 y4tplus1 = (x4*y5)/(2.*wM);
 
-y5tplus1 = (((4*em + (-1 + sAm)*(-1 + sBf))*x1 + x2 - sAm*x2 + x3 - sBf*x3 + x4)*y5)/(2.*wM);
+y5tplus1 = (((4*em + (-1 + sAm)*(-1 + sBm))*x1 + x2 - sAm*x2 + x3 - sBm*x3 + x4)*y5)/(2.*wM);
 
 
 
@@ -139,68 +140,68 @@ y5tplus1 = (((4*em + (-1 + sAm)*(-1 + sBf))*x1 + x2 - sAm*x2 + x3 - sBf*x3 + x4)
 
                                     state = -1;
 
-                                    if (pAmf >= pol_bound && 
-                                            pAmf <= 1.0 - pol_bound && 
-                                            pBmf >= pol_bound &&
-                                            pBmf <= 1.0 - pol_bound &&
-                                            pAmm >= pol_bound && 
-                                            pAmm <= 0.5 - pol_bound && 
-                                            pBmm >= pol_bound &&
-                                            pBmm <= 0.5 - pol_bound)
+                                    if (pAmf >= pol_bound_f && 
+                                            pAmf <= 1.0 - pol_bound_f && 
+                                            pBmf >= pol_bound_f &&
+                                            pBmf <= 1.0 - pol_bound_f &&
+                                            pAmm >= pol_bound_m && 
+                                            pAmm <= 0.5 - pol_bound_m && 
+                                            pBmm >= pol_bound_m &&
+                                            pBmm <= 0.5 - pol_bound_m)
                                     {
                                         state = 1;
                                     }
-                                    else if (pAmf > 1.0 - pol_bound &&
-                                            pBmf > 1.0 - pol_bound &&
-                                            pAmm > 0.5 - pol_bound &&
-                                            pBmm > 0.5 - pol_bound)
+                                    else if (pAmf > 1.0 - pol_bound_f &&
+                                            pBmf > 1.0 - pol_bound_f &&
+                                            pAmm > 0.5 - pol_bound_m &&
+                                            pBmm > 0.5 - pol_bound_m)
                                     {
                                         state = 2;
 
                                     }
-                                    else if (pAff >= 1.0 - pol_bound &&
-                                            pBff >= 1.0 - pol_bound &&
-                                            pAfm >= 0.5 - pol_bound &&
-                                            pBfm >= 0.5 - pol_bound)
+                                    else if (pAff >= 1.0 - pol_bound_f &&
+                                            pBff >= 1.0 - pol_bound_f &&
+                                            pAfm >= 0.5 - pol_bound_m &&
+                                            pBfm >= 0.5 - pol_bound_m)
                                     {
                                         state = 3;
                                     }
                                     else if (
                                             (
                                                 (
-                                                 (pAff > 1.0 - pol_bound || pAff < pol_bound) &&
-                                                pBff >= pol_bound &&
-                                                pBff <= 1.0 - pol_bound) 
+                                                 (pAff > 1.0 - pol_bound_f || pAff < pol_bound_f) &&
+                                                pBff >= pol_bound_f &&
+                                                pBff <= 1.0 - pol_bound_f) 
                                                 ||
-                                                ((pBff > 1.0 - pol_bound || pBff < pol_bound) &&
-                                                pAff >= pol_bound &&
-                                                pAff <= 1.0 - pol_bound)
+                                                ((pBff > 1.0 - pol_bound_f || pBff < pol_bound_f) &&
+                                                pAff >= pol_bound_f &&
+                                                pAff <= 1.0 - pol_bound_f)
                                             ) &&
                                             (
-                                                ((pAfm > 0.5 - pol_bound || pAfm < pol_bound) &&
-                                                pBfm >= pol_bound &&
-                                                pBfm <= 0.5 - pol_bound) 
+                                                ((pAfm > 0.5 - pol_bound_m || pAfm < pol_bound_m) &&
+                                                pBfm >= pol_bound_m &&
+                                                pBfm <= 0.5 - pol_bound_m) 
                                                 ||
-                                                ((pBfm > 0.5 - pol_bound || pBfm < pol_bound) &&
-                                                pAfm >= pol_bound &&
-                                                pAfm <= 0.5 - pol_bound)
+                                                ((pBfm > 0.5 - pol_bound_m || pBfm < pol_bound_m) &&
+                                                pAfm >= pol_bound_m &&
+                                                pAfm <= 0.5 - pol_bound_m)
                                             )
                                     )
                                     {
                                         state = 4;
                                     }
                                     else if (
-                                                (pAff > 1.0 - pol_bound && pBff <  pol_bound)
+                                                (pAff > 1.0 - pol_bound_f && pBff <  pol_bound_f)
                                                 &&
-                                                (pAfm > .5 - pol_bound && pBfm < pol_bound)
+                                                (pAfm > .5 - pol_bound_m && pBfm < pol_bound_m)
                                             )
                                     {
                                         state = 5;
                                     }
                                     else if (
-                                                (pAff < pol_bound && pBff > 1.0 - pol_bound)
+                                                (pAff < pol_bound_f && pBff > 1.0 - pol_bound_f)
                                                 &&
-                                                (pAfm < pol_bound && pBfm > 0.5 - pol_bound)
+                                                (pAfm < pol_bound_m && pBfm > 0.5 - pol_bound_m)
                                             )
                                     {
                                         state = 6;
@@ -287,70 +288,71 @@ y5tplus1 = (((4*em + (-1 + sAm)*(-1 + sBf))*x1 + x2 - sAm*x2 + x3 - sBf*x3 + x4)
                                     pAf = (x1 + x2 + y1 + y2)/2;
                                     pBm = (x2 + x4 + y2 + y4)/2;
                                     pBf = (x1 + x3 + y1 + y3)/2;
-                                    
+
                                     state = -1;
 
-                                    if (pAmf >= pol_bound && 
-                                            pAmf <= 1.0 - pol_bound && 
-                                            pBmf >= pol_bound &&
-                                            pBmf <= 1.0 - pol_bound &&
-                                            pAmm >= pol_bound && 
-                                            pAmm <= 0.5 - pol_bound && 
-                                            pBmm >= pol_bound &&
-                                            pBmm <= 0.5 - pol_bound)
+                                    if (pAmf >= pol_bound_f && 
+                                            pAmf <= 1.0 - pol_bound_f && 
+                                            pBmf >= pol_bound_f &&
+                                            pBmf <= 1.0 - pol_bound_f &&
+                                            pAmm >= pol_bound_m && 
+                                            pAmm <= 0.5 - pol_bound_m && 
+                                            pBmm >= pol_bound_m &&
+                                            pBmm <= 0.5 - pol_bound_m)
                                     {
                                         state = 1;
                                     }
-                                    else if (pAmf > 1.0 - pol_bound &&
-                                            pBmf > 1.0 - pol_bound &&
-                                            pAmm > 0.5 - pol_bound &&
-                                            pBmm > 0.5 - pol_bound)
+                                    else if (pAmf > 1.0 - pol_bound_f &&
+                                            pBmf > 1.0 - pol_bound_f &&
+                                            pAmm > 0.5 - pol_bound_m &&
+                                            pBmm > 0.5 - pol_bound_m)
                                     {
                                         state = 2;
 
                                     }
-                                    else if (pAff >= 1.0 - pol_bound &&
-                                            pBff >= 1.0 - pol_bound &&
-                                            pAfm >= 0.5 - pol_bound &&
-                                            pBfm >= 0.5 - pol_bound)
+                                    else if (pAff >= 1.0 - pol_bound_f &&
+                                            pBff >= 1.0 - pol_bound_f &&
+                                            pAfm >= 0.5 - pol_bound_m &&
+                                            pBfm >= 0.5 - pol_bound_m)
                                     {
                                         state = 3;
                                     }
                                     else if (
                                             (
-                                                ((pAff > 1.0 - pol_bound || pAff < pol_bound) &&
-                                                pBff >= pol_bound &&
-                                                pBff <= 1.0 - pol_bound) 
+                                                (
+                                                 (pAff > 1.0 - pol_bound_f || pAff < pol_bound_f) &&
+                                                pBff >= pol_bound_f &&
+                                                pBff <= 1.0 - pol_bound_f) 
                                                 ||
-                                                ((pBff > 1.0 - pol_bound || pBff < pol_bound) &&
-                                                pAff >= pol_bound &&
-                                                pAff <= 1.0 - pol_bound)
+                                                ((pBff > 1.0 - pol_bound_f || pBff < pol_bound_f) &&
+                                                pAff >= pol_bound_f &&
+                                                pAff <= 1.0 - pol_bound_f)
                                             ) &&
                                             (
-                                                ((pAfm > 0.5 - pol_bound || pAfm < pol_bound) &&
-                                                pBfm >= pol_bound &&
-                                                pBfm <= 0.5 - pol_bound) 
+                                                ((pAfm > 0.5 - pol_bound_m || pAfm < pol_bound_m) &&
+                                                pBfm >= pol_bound_m &&
+                                                pBfm <= 0.5 - pol_bound_m) 
                                                 ||
-                                                ((pBfm > 0.5 - pol_bound || pBfm < pol_bound) &&
-                                                pAfm >= pol_bound &&
-                                                pAfm <= 0.5 - pol_bound)
+                                                ((pBfm > 0.5 - pol_bound_m || pBfm < pol_bound_m) &&
+                                                pAfm >= pol_bound_m &&
+                                                pAfm <= 0.5 - pol_bound_m)
                                             )
                                     )
                                     {
                                         state = 4;
                                     }
                                     else if (
-                                                (pAff > 1.0 - pol_bound && pBff <  bound)
+                                                (pAff > 1.0 - pol_bound_f && pBff <  pol_bound_f)
                                                 &&
-                                                (pAfm > .5 - pol_bound && pBfm < bound)
+                                                (pAfm > .5 - pol_bound_m && pBfm < pol_bound_m)
                                             )
                                     {
                                         state = 5;
                                     }
                                     else if (
-                                                (pAff < pol_bound && pBff > 1.0 - bound)
+                                                (pAff < pol_bound_f && pBff > 1.0 - pol_bound_f)
                                                 &&
-                                                (pAfm < pol_bound && pBfm > 0.5 - bound)
+                                                (pAfm < pol_bound_m && pBfm > 0.5 - pol_bound_m)
                                             )
                                     {
                                         state = 6;
@@ -361,7 +363,6 @@ y5tplus1 = (((4*em + (-1 + sAm)*(-1 + sBf))*x1 + x2 - sAm*x2 + x3 - sBf*x3 + x4)
                                     qe = x3 + x4;
                                     ps = .5 * (y1 + y3);
                                     qs = .5 * (y3 + y4);
-
 
                                     Dz = x1 * .5 * y4 + x4 * .5 * y1 - x2 * .5 * y3 - x3 * .5 * y2;
                                     Demax = pe * (1.0 - qe) < (1.0 - pe) * qe ? pe * (1.0 - qe) : (1.0 - pe) * qe;
@@ -406,7 +407,7 @@ y5tplus1 = (((4*em + (-1 + sAm)*(-1 + sBf))*x1 + x2 - sAm*x2 + x3 - sBf*x3 + x4)
                                         << endl;
 
                                     break;
-                            }
+                                }
 
         } // sAf
     } // sAm
