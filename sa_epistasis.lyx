@@ -102,6 +102,24 @@ Sex-Differences in Epistasis and Sexually Antagonistic Variation
 
 \begin_layout Author
 Bram Kuijper
+\family typewriter
+
+\begin_inset Formula $^{1,2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $1)$
+\end_inset
+
+ Environment and Sustainability Institute, University of Exeter, Penryn
+ Campus, TR10 9EZ Penryn, United Kingdom
+\end_layout
+
+\begin_layout Standard
+2) a.l.w.kuijper@exeter.ac.uk
 \end_layout
 
 \begin_layout Abstract
@@ -112,34 +130,73 @@ d.
  Here we assess more complicated scenarios
 \end_layout
 
+\begin_layout Abstract
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Todo: 
+\end_layout
+
+\begin_layout Plain Layout
+read this paper on the evolution of sex differences in dominance
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Introduction
 \end_layout
 
 \begin_layout Standard
-Read 
+Sexual dimorphism is widespread among multicellular organisms, indicative
+ of historical selection in opposite ways across the sexes 
 \begin_inset CommandInset citation
-LatexCommand citet
-key "Phillips2008,Mackay2014"
+LatexCommand citep
+key "Doorn2009,Cox2009,Bonduriansky2009fd"
 
 \end_inset
 
- on epistasis in general.
+.
+ Despite this prevalence of sexual dimorphism, Field and lab studies suggest
+ that sexually antagonistic selection is often far from resolved 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Rice2001"
+
+\end_inset
+
+.
+ In addition, numerous studies suggest that there is substantial standing
+ genetic variation that is sexually antagonistic in both lab and field populatio
+ns (refs), illustrating the importance of sexual antagonism to the evolutionary
+ process.
+\end_layout
+
+\begin_layout Standard
+Yet, extensive levels of polymorphism are not easy to reconcile with classical
+ predictions 
+\begin_inset CommandInset citation
+LatexCommand citep
+before "e.g.,"
+key "Kidwell1977,Rice1984"
+
+\end_inset
+
+, which argue that sexually antagonistic selection only result in polymorphism
+ when selection is near equivalent across the sexes (unless selection is
+ strong), when dominance of alleles is dissimilar between the sexes or when
+ sexually antagonistic loci are X-linked.
  
 \end_layout
 
 \begin_layout Standard
-SA as a driver of polymorphism.
- While conventional studies have largely concentrated on how sexual antagonism
- affects polymorphism in single loci 
-\begin_inset CommandInset citation
-LatexCommand citep
-before "e.g.,"
-key "Kidwell1977,Rice1984,Fry2010,Connallon2012"
-
-\end_inset
-
-, more recent models have started to assess how SA affects multilocus evolution
+While conventional studies have largely concentrated on how sexual antagonism
+ affects polymorphism in single loci, more recent models have started to
+ assess how sexually antagonistic selection affects multilocus evolution
  
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -147,7 +204,8 @@ key "Patten2010,Ubeda2011,Connallon2011,Arnqvist2014,Rydzewski2016"
 
 \end_inset
 
-
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -202,14 +260,23 @@ Negative epistasis has been assessed by Arnqvist.
  dep selection apparently, 
 \end_layout
 
+\begin_layout Standard
+Some stuff about sex differences in gene expression: 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "McCoy2012,Hansen2013"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 The model
 \end_layout
 
 \begin_layout Standard
-We assess the role of different types of epistasis on sexually antagonistic
- traits.
- Explain different ypes 
+Here we use a
 \end_layout
 
 \begin_layout Section
